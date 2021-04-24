@@ -12,6 +12,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script:[
+      {crossorigin: 'anonymous', type:'text/javascript', src:"https://kit.fontawesome.com/ebaf0ac9e9.js"}
     ]
   },
 
@@ -39,7 +42,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://localhost:5000'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
